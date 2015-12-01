@@ -8,19 +8,24 @@ namespace AkavacheSample
     {
         public App()
         {
+            var nameEntry  = new Entry { Placeholder = "名前を入力" };
+            var ageEntry   = new Entry { Placeholder = "年齢を入力" };
+            var saveButton = new Button { Text = "保存" };
+            var loadButton = new Button { Text = "読み出し" };
+                
             // The root page of your application
             MainPage = new ContentPage
             {
+                Padding = new Thickness(20),
                 Content = new StackLayout
                 {
                     VerticalOptions = LayoutOptions.Center,
                     Children =
                     {
-                        new Label
-                        {
-                            XAlign = TextAlignment.Center,
-                            Text = "Welcome to Xamarin Forms!"
-                        }
+                        nameEntry,
+                        ageEntry,
+                        saveButton,
+                        loadButton
                     }
                 }
             };
